@@ -337,19 +337,8 @@ Gui, TAT:Default
 Return
 
 ImportCsv:
-InputBox, path, Import CSV, Full path of CSV file to use?,,,,,,,,%A_Desktop%\
-If ErrorLevel
-	{
-		Return
-	}
-	else
-	{
-		If (Strlen(path) = 0)
-			{
-				Msgbox, Please enter a file path
-				goto ImportCsv
-			}
 
+	{
 		Loop, read, %path%
 			{
 				If (A_Index > 1)
