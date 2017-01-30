@@ -337,7 +337,9 @@ Gui, TAT:Default
 Return
 
 ImportCsv:
+FileSelectFile, path,,%A_Desktop%,Choose CSV to Import, Comma Separated Values (*.csv)
 
+If (path)
 	{
 		Loop, read, %path%
 			{
